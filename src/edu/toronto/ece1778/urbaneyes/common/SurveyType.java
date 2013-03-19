@@ -7,6 +7,7 @@ public final class SurveyType implements Serializable {
 
 	private int id;
 	private String name;
+	private SurveyKind kind = SurveyKind.POINT;
 	private ArrayList<Question> questions;
 	
 	public SurveyType() {
@@ -20,12 +21,16 @@ public final class SurveyType implements Serializable {
 	public String getName() {
 		return name;
 	}
+
+	public SurveyKind getKind() {
+		return kind;
+	}
 	
 	public ArrayList<Question> getQuestions() {
 		return questions;
 	}
 	
-	public void AddQuestion(Question q) {
+	public void addQuestion(Question q) {
 		questions.add(q);
 	}
 	
@@ -36,4 +41,9 @@ public final class SurveyType implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	public void setKind(SurveyKind kind) {
+		this.kind = kind;
+	}
+
 }

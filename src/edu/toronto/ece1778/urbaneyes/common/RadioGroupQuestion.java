@@ -29,7 +29,7 @@ public final class RadioGroupQuestion extends Question {
 		}
 	}
 	
-	private ArrayList<Option> options;
+	private ArrayList<Option> options = new ArrayList<Option>();
 	
 	public RadioGroupQuestion() {
 		super();
